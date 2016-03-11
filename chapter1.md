@@ -1,5 +1,5 @@
 ---
-title       : Insert the chapter title here
+title       : Getting started with Bio3D
 description : Insert the chapter description here
 attachments :
   slides_link : https://s3.amazonaws.com/assets.datacamp.com/course/teach/slides_example.pdf
@@ -34,7 +34,7 @@ movies <- read.csv("http://s3.amazonaws.com/assets.datacamp.com/course/introduct
 
 # 2. Pre-load packages, so that users don't have to do this manually.
 library(ggplot2)
-
+library(bio3d)
 # 3. Create a plot in the viewer, that students can check out while reading the exercise
 ggplot(movies, aes(x = runtime, y = rating, col = genre)) + geom_point()
 ```

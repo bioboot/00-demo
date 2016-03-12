@@ -74,14 +74,21 @@ A dataset with a selection of movies, `movie_selection`, is available in the wor
 *** =pre_exercise_code
 ```{r}
 # Pre-load a package in the workspace
-library(MindOnStats)
+library(bio3d)
+data(transducin)
+attach(transducin)
+
+pc <- pca(pdbs$xyz, rm.gaps=T)
+plot(pc, col=annotation[,"color"])
+
+##library(MindOnStats)
 
 # You can prepare the data before the student starts:
-data(Movies)
-movie_selection <- Movies[Movies$Genre %in% c("action", "animated", "comedy"),c("Genre", "Rating", "Run")]
+##data(Movies)
+##movie_selection <- Movies[Movies$Genre %in% c("action", "animated", "comedy"),c("Genre", "Rating", "Run")]
 
 # You can also clean up data so that it's not available in the student's workspace anymore:
-rm(Movies)
+##rm(Movies)
 ```
 
 *** =sample_code
